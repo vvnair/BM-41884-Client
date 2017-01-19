@@ -3,6 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <?php
 	$this->load->helper('url');
+	
+	//$result1['Firstname']=$this->input->get_post("fname");
+	
 	?>
 
 <!DOCTYPE html>
@@ -295,8 +298,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					
 					</form>
 					<div>
-								<img src="<?php echo base_url().'image/kat.jpg';?>" class="img2"> 
-								<p class="kat">Kathakali</p>
+								<img src="<?php echo base_url().'uploads/'.$data['Image'];?>" class="img2"> 
+								<p class="kat"><?php echo $data['Firstname']; ?></p>
 								
 					</div>
 					</div>
@@ -313,15 +316,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<div class="row secondrow hidden-xs hidden-sm"><!-- 2nd row here-->
 						<div class="col-md-offset-0 col-md-3 col-lg-offset-0 col-lg-3">
-							<img src="<?php echo base_url().'image/kat.jpg';?>" class="img3">
-							<p class="kathakali"> Kathakali</p>
+							<img src="<?php echo base_url().'uploads/'.$data['Image'];?>" class="img3">
+							<p class="kathakali"><?php echo $data['Firstname']; ?></p>
 						</div>
 						<div class="col-md-5 col-lg-5 middlebox">
 							<p id="update">Update Status</p>
 							<p id="add"> Add Photo/Video</p>
 							<p id="write"> Write/Note</p>
 							<hr class="middleline"> <br>
-							<img src="<?php echo base_url().'image/kat.jpg';?>" class="middleimage">
+							<img src="<?php echo base_url().'uploads/'.$data['Image'];?>" class="middleimage">
 							<p id="whatis"> What's on your mind? </p>
 
 						</div>
@@ -348,7 +351,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="row row-this2 visible-sm visible-xs"><!--first row -->
 						<div class="col-sm-12 col-xs-12">
 							<img src="<?php echo base_url().'image/fb.png';?>" class="fbimg">
-							<img src="<?php echo base_url().'image/kat.jpg';?>" class="katimg">
+							<img src="<?php echo base_url().'uploads/'.$data['Image'];?>" class="katimg">
 							<p id="kat2">Kathakali</p>
 						</div>
 
@@ -357,8 +360,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<!-- ends here -->
 					<div class="row hidden-lg hidden-md">
 						<div >
-							<img src="<?php echo base_url().'image/kat.jpg';?>" class="katimg2">
-							<p class="katpara">Kathakali</p>
+							<img src="<?php echo base_url().'uploads/'.$data['Image'];?>" class="katimg2">
+							<p class="katpara"><?php echo $data['Firstname']; ?></p>
 							<p class="edit"> Edit Profile</p>
 						</div>
 						
@@ -369,7 +372,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<p id="add2">Add Photo/Video</p>
 							<p id="write2">Write/Note</p>
 							<hr id="hrmob"><br>
-							<img src="<?php echo base_url().'image/kat.jpg';?>" class="kathere">
+							<img src="<?php echo base_url().'uploads/'.$data['Image'];?>" class="kathere">
 							<p class="mind2"> What's on your mind ? </p>
 
 						</div>

@@ -1,6 +1,4 @@
 <!--BM-41884 -->
-
-
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
@@ -16,6 +14,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/boot.css">
+
+	<script type="text/javascript">
+		
+		
+
+	</script>
+
+	<style type="text/css">
+	.uploadbtn {
+		margin-left: -60px;
+		margin-top: -10px;	
+
+
+	}
+
+	#up {
+
+		padding-top: 10px;
+		padding-left: 53px;
+	}
+
+	</style>
 
 	</head>
 
@@ -55,9 +75,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						"form-control">
 					</div>
 
-					<div class=" col-sm-12- col-xs-12 col-btn">
+					<div class=" col-sm-12 col-xs-12 col-btn">
 
-						<button type="submit" class="btn btn-primary" style="width: 100%">Log In</button>
+						<button type="submit" class="btn btn-primary" style="width: 100%" id="login1">Log In</button>
 					</div>
 				</form>
 			</div>
@@ -79,6 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 
 			<div class="row">
+				<form method="post" enctype="multipart/form-data" action="<?php echo base_url().'/index.php/Facebook/signup'?>">
 
 				<div class="col-md-offset-0 col-md-6 col-lg-offset-0 col-lg-6 hidden-ms hidden-sm visible-md visible-lg">
 					<img id="image" src="image/fb2.png">
@@ -94,6 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<p id="ye">Your Email:</p>
 							<p id="re">Re-enter Email:</p>
 							<p id="np">New Password:</p>
+							<p id="up">Upload Picture:</p>
 							<p id="iam">I am:</p>
 							<p id="birth">Birthday:</p>
 
@@ -107,29 +129,81 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<input class="input3 form-control" type="email" name="email"><br>
 									<input class="input4 form-control" type="email" name="remail"><br>
 									<input class="input5 form-control" type="password" name="pwd"><br>
-									 <select class="gender">
-									 <option value="" selected="">Select Sex :</option>
-									  <option value="male">Male</option>
-									  <option value="female">Female</option>
+									<!-- <label class="btn btn-success btn-file uploadbtn"> -->
+									    Browse <input type="file" class= "btn btn-success btn-file uploadbtn" name="uploadbtn" style="display: none;">
+									<!-- </label><br> -->
+								
+									<select class="gender" name="gender">
+									<option value="" selected="">Select Sex :</option>
+									<option value="male">Male</option>
+									<option value="female">Female</option>
 									  
-										</select> <br>
+									</select> <br>
 										
 														
-											<select class="day">
+											<select class="day" name="month">
 										 	<option value="" selected="">Month :</option>
-										  	<option value="male">Male</option>
-										  	<option value="female">Female</option>
+										  	<option value="1">January</option>
+  											<option value="2">February</option>
+  											<option value="3">March</option>
+  											<option value="4">April</option>
+  											<option value="5">May</option>
+  											<option value="6">June</option>
+  											<option value="7">July</option>
+  											<option value="8">August</option>
+  											<option value="9">September</option>
+  											<option value="10">October</option>
+  											<option value="11">November</option>
+  											<option value="12">December</option>
 										  	</select> 
 
-										  	<select class="">
+										  	<select class="" name="day">
 										 	<option value="" selected="">Day :</option>
-										  	<option value="male">Male</option>
-										  	<option value="female">Female</option>
+										  	<option value="1">1</option>      
+										    <option value="2">2</option>      
+										    <option value="3">3</option>      
+										    <option value="4">4</option>      
+										    <option value="5">5</option>      
+										    <option value="6">6</option>      
+										    <option value="7">7</option>      
+										    <option value="8">8</option>      
+										    <option value="9">9</option>      
+										    <option value="10">10</option>      
+										    <option value="11">11</option>      
+										    <option value="12">12</option>      
+										    <option value="13">13</option>      
+										    <option value="14">14</option>      
+										    <option value="15">15</option>      
+										    <option value="16">16</option>      
+										    <option value="17">17</option>      
+										    <option value="18">18</option>      
+										    <option value="19">19</option>      
+										    <option value="20">20</option>      
+										    <option value="21">21</option>      
+										    <option value="22">22</option>      
+										    <option value="23">23</option>      
+										    <option value="24">24</option>      
+										    <option value="25">25</option>      
+										    <option value="26">26</option>      
+										    <option value="27">27</option>      
+										    <option value="28">28</option>      
+										    <option value="29">29</option>      
+										    <option value="30">30</option>      
+										    <option value="31">31</option> 
 										  	</select> 
-										  	<select class="">
+										  	<select class="" name="year">
 										 	<option value="" selected="">Year :</option>
-										  	<option value="male">Male</option>
-										  	<option value="female">Female</option>
+										 	<option value="2002">2002</option>
+										  	<option value="2009">2009</option>      
+										    <option value="2010">2010</option>      
+										    <option value="2011">2011</option>      
+										    <option value="2012">2012</option>      
+										    <option value="2013">2013</option>      
+										    <option value="2014">2014</option>      
+										    <option value="2015">2015</option>      
+										    <option value="2016">2016</option>      
+8										    <option value="2017">2017</option>      
+										    <option value="2018">2018</option>     
 										  	</select> 
 								</div>
 
@@ -138,7 +212,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 											<div class="col-md-8 wh">
 												<p id="why">Why do I need to provide my birthday?</p>
-												<button type="button" class="btn btn-md btn1"><b>Sign Up</b></button>
+												<button type="submit" class="btn btn-md btn1"><b>Sign Up</b></button>
 												<hr id="foot" class="hidden-sm hidden-xs">
 												<p class="foote"><b class="page">Create a Page</b> for a celebrity, band or business</p>
 											</div>
@@ -152,9 +226,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 										<div class"row">
 										<div class="col-sm-12- col-xs-12 hidden-md hidden-lg visible-sm visible-xs">
-										<button type="button" class="btn btn-md btn2"><b>Sign Up</b></button>
+										<button type="submit" class="btn btn-md btn2"><b>Sign Up</b></button>
 										</div>
 										</div>
+						</form>
 
 				</div>
 			</div>

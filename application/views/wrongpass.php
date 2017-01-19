@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <?php
 	$this->load->helper('url');
+	$user['email']=$this->input->get_post("email");
+
 	?>
 <!DOCTYPE html>
 <html>
@@ -240,6 +242,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<div class="container-fluid">
 		<!--row 1 starts here-->
+		
 			<div class="row row1 hidden-sm hidden-xs">
 				<div class="col-md-offset-0 col-md-12 col-lg-offset-0 col-lg-12 ">
 					<img src="<?php echo base_url().'image/fbnew.jpg';?>" id="fb1">
@@ -251,11 +254,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<p id="p1"><b>Facebook Login</b></p>
 					<hr>
 					<p id="p2">Login :</p>
-					<img src="<?php echo base_url().'image/kat.jpg';?>" class="img2">
-					<p id="name">Kathakali<br>info@baabtra.com</p>
-					<p id="not">Not Kathakali?</p>
+					<img src="<?php echo base_url().'uploads/'.$data['Image'];?>" class="img2">
+					<p id="name"><?php echo $data['Firstname']; ?><br><?php echo $user['email']; ?></p>
+					<p id="not">Not <?php echo $data['Firstname']; ?></p>
 					<form action="<?php echo base_url().'/index.php/Facebook/fetch'?>" method="post">
-					<input type="hidden" name="email" value="user">
+					<input type="hidden" name="email" value="<?php echo $user['email']; ?>"> <!--value="user@gmail.com"-->
 					<p id="pass">Password :</p>
 					<div class="password">
 					<input type="password" name="pwd" class="pwd">
@@ -300,12 +303,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				 	<p id="fbl"><b>Facebook Login</b></p>
 				 	<hr><br>
 				 	<p class="loginmob">Login :</p>
-				 	<img src="<?php echo base_url().'image/kat.jpg';?>" class="katimgmob">
-				 	<p id="para3">Not Kathakali?</p>
-				 	<p id="para4">Kathakali<br>info@baabtra.com</p>	
+				 	<img src="<?php echo base_url().'uploads/'.$data['Image'];?>" class="katimgmob">
+				 	<p id="para3">Not <?php echo $data['Firstname']; ?></p>
+				 	<p id="para4"><?php echo $data['Firstname']; ?><br><?php echo $user['email']; ?></p>	
 				 	<p id="mobpass">Password : </p>
 				 	<form method="post" action="<?php echo base_url().'/index.php/Facebook/fetch'?>">
-				 		<input type="hidden" name="email" value="info@baabtra.com">
+				 		<input type="hidden" name="email" value="<?php echo $user['email']; ?>">
 				 		<input type="password" name="pwd" class="mobpass1" >
 				 		
 				 	
